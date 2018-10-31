@@ -1,0 +1,59 @@
+version: '3'
+services:
+  rabbit:
+    image: "rabbitmq:3-management"
+    ports:
+    - "15672:15672"
+    - "5672:5672"
+    restart: always
+    env_file: .env
+    networks:
+    - datix
+    hostname: rabbit
+    #    tty: true
+    volumes:
+    - rabbit:/var/lib/rabbitmq
+    - ./conf/:/etc/rabbitmq/
+    command:  bash -c "sleep 10; rabbitmq-server;"
+  db:
+    build: ./apps/db
+    env_file: .env
+    depends_on:
+    - "rabbit"
+    restart: always
+    networks:
+    - datix
+    hostname: db
+#    tty: true
+  api:
+    build: ./apps/api
+    ports:
+    - "8080:8080"
+    restart: always
+    env_file: .env
+    depends_on:
+    - "rabbit"
+    - "db"
+    networks:
+    - datix
+    hostname: api
+#    tty: true
+  frontend:
+    build: ./frontend
+    ports:
+    - "80:80"
+    restart: always
+    env_file: .env
+    depends_on:
+    - "api"
+    networks:
+    - datix
+    hostname: frontend
+#    tty: true
+
+volumes:
+  rabbit:
+    driver: local
+
+networks:
+  datix:

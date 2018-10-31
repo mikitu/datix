@@ -1,0 +1,61 @@
+hash: cf962b15d02fa0dcf435b52179f7a328ef1d05d854b77182b39574279347cc3b
+updated: 2018-10-31T08:41:54.988302Z
+imports:
+- name: github.com/dgrijalva/jwt-go
+  version: 06ea1031745cb8b3dab3f6a236daf2b0aa468b7e
+- name: github.com/google/uuid
+  version: d460ce9f8df2e77fb1ba55ca87fafed96c607494
+- name: github.com/hashicorp/go-immutable-radix
+  version: 27df80928bb34bb1b0d6d0e01b9e679902e7a6b5
+- name: github.com/hashicorp/go-memdb
+  version: 1289e7fffe71d8fd4d4d491ba9a412c50f244c44
+- name: github.com/hashicorp/golang-lru
+  version: 20f1fb78b0740ba8c3cb143a61e86ba5c8669768
+  subpackages:
+  - simplelru
+- name: github.com/iris-contrib/go.uuid
+  version: 36e9d2ebbde5e3f13ab2e25625fd453271d6522e
+- name: github.com/joho/godotenv
+  version: 23d116af351c84513e1946b527c88823e476be13
+- name: github.com/kataras/iris
+  version: 15bb55d85eac378bbe0c98c10ffea938cc05fe4d
+  subpackages:
+  - core/errors
+- name: github.com/konsorten/go-windows-terminal-sequences
+  version: 5c8c8bd35d3832f5d134ae1e1e375b69a4d25242
+- name: github.com/labstack/echo
+  version: 1abaa3049251d17932e4313c2d6165073fd07fd8
+  subpackages:
+  - '...'
+  - middleware
+- name: github.com/labstack/gommon
+  version: 0a22a0df01a7c84944c607e8a6e91cfe421ea7ed
+  subpackages:
+  - bytes
+  - color
+  - log
+  - random
+- name: github.com/mattn/go-colorable
+  version: efa589957cd060542a26d2dd7832fd6a6c6c3ade
+- name: github.com/mattn/go-isatty
+  version: 6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c
+- name: github.com/sirupsen/logrus
+  version: ad15b42461921f1fb3529b058c6786c6a45d5162
+- name: github.com/streadway/amqp
+  version: 70e15c650864f4fc47f5d3c82ea117285480895d
+- name: github.com/valyala/bytebufferpool
+  version: e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7
+- name: github.com/valyala/fasttemplate
+  version: dcecefd839c4193db0d35b88ec65b4c12d360ab0
+- name: golang.org/x/crypto
+  version: 034e5325b6ab92faa14d15c30e86919e911cf8e0
+  subpackages:
+  - acme
+  - acme/autocert
+  - ssh/terminal
+- name: golang.org/x/sys
+  version: d0faeb539838e250bd0a9db4182d48d4a1915181
+  subpackages:
+  - unix
+  - windows
+testImports: []
