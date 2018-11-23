@@ -12,9 +12,7 @@ services:
     hostname: rabbit
     #    tty: true
     volumes:
-    - rabbit:/var/lib/rabbitmq
     - ./conf/:/etc/rabbitmq/
-    command:  bash -c "sleep 10; rabbitmq-server;"
   db:
     build: ./apps/db
     env_file: .env
@@ -50,10 +48,6 @@ services:
     - datix
     hostname: frontend
 #    tty: true
-
-volumes:
-  rabbit:
-    driver: local
 
 networks:
   datix:
