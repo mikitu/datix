@@ -11,8 +11,8 @@ services:
     - datix
     hostname: rabbit
     #    tty: true
-    volumes:
-    - ./conf/:/etc/rabbitmq/
+    #volumes:
+    # - ./conf/:/etc/rabbitmq/  
   db:
     build: ./apps/db
     env_file: .env
